@@ -34,6 +34,8 @@ requirements:
     - google-auth
     - halo
     - humanize
+    - jsonpatch
+    - jsonschema
     - oauth2client
     - packaging
     - pathspec >=0.8.1
