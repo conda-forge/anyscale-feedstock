@@ -34,8 +34,6 @@ requirements:
     - google-auth
     - halo
     - humanize
-    - jsonpatch
-    - jsonschema
     - oauth2client
     - packaging
     - pathspec >=0.8.1
@@ -47,7 +45,7 @@ requirements:
     - six >=1.10
     - smart_open
     - tabulate
-    - urllib3 >=1.26.12
+    - urllib3 >=1.26.17
     - wrapt
     - tqdm
     - tzlocal
