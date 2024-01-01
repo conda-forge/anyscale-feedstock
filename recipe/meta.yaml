@@ -1,5 +1,5 @@
 {% set name = "anyscale" %}
-{% set version = "0.5.165" %}
+{% set version = "0.5.167" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a5581567bd191be21c929e9339a9becdd4ba64bc2206b6d087618e9353b15dde
+  sha256: e9a91c2f0370ca9d5aef8b6ba7259bb47876a91a4fac2a5f8b63d4a79d099135
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - argon2-cffi
     - boto3 >=1.26.76
     - botocore >=1.19.52
-    - certifi
+    - certifi >=2023.7.22
     - click >=7.0
     - colorama
     - gitpython
@@ -39,7 +39,6 @@ requirements:
     - oauth2client
     - packaging
     - pathspec >=0.8.1
-    - pydantic >=1.9.0,<2
     - python-dateutil
     - pyyaml
     - requests
@@ -47,11 +46,10 @@ requirements:
     - six >=1.10
     - smart_open
     - tabulate
-    - urllib3 >=1.26.17
-    - wrapt
     - tqdm
     - tzlocal
-
+    - urllib3 >=1.26.17
+    - wrapt
 
 test:
   imports:
