@@ -55,7 +55,8 @@ test:
   imports:
     - anyscale
   requires:
-    - pip
+    # until https://github.com/pypa/pip/issues/12884 is fixed
+    - pip <24.2
   commands:
     - pip check
     - anyscale --version
