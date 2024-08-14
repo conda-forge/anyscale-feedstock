@@ -1,5 +1,5 @@
 {% set name = "anyscale" %}
-{% set version = "0.24.54" %}
+{% set version = "0.24.56" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 92d5916ecd07a2beb88762a9e119367655e1a6ba6f8bc3e34bacbbb8256b544a
+  sha256: cf71153e1db7e0dd02ba89603e8099b0ba5746e57d8960d3a5e9f6595076cba3
 
 build:
   number: 0
@@ -55,7 +55,8 @@ test:
   imports:
     - anyscale
   requires:
-    - pip
+    # until https://github.com/pypa/pip/issues/12884 is fixed
+    - pip <24.2
   commands:
     - pip check
     - anyscale --version
