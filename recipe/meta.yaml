@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools_scm
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - aiohttp >=3.7.4
     - argon2-cffi
     - boto3 >=1.26.76
@@ -55,6 +55,7 @@ test:
   imports:
     - anyscale
   requires:
+    - python {{ python_min }}
     # until https://github.com/pypa/pip/issues/12884 is fixed
     - pip <24.2
   commands:
