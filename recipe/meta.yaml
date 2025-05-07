@@ -1,5 +1,5 @@
 {% set name = "anyscale" %}
-{% set version = "0.26.22 %}
+{% set version = "0.26.22" %}
 
 package:
   name: {{ name|lower }}
