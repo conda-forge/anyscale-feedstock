@@ -1,13 +1,13 @@
 {% set name = "anyscale" %}
-{% set version = "0.24.87" %}
+{% set version = "0.26.22" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/17/ba/a03dbcfa3fc900611d2b56c52cd874d0db708d811c58aab5b5d784789b35/anyscale-{{ version }}.tar.gz
-  sha256: bbad393c4e9fde2fb669561aa0efac77309618a3f8716989c723a412b56608fb
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/anyscale-{{ version }}.tar.gz
+  sha256: 59ebde5a297ee7457b012e2f86f9ad1052c3b113728ed59d06a3e2b156c07998
 
 build:
   number: 0
@@ -20,36 +20,43 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
     - setuptools_scm
   run:
     - python >={{ python_min }}
-    - aiohttp >=3.7.4
-    - argon2-cffi
     - boto3 >=1.26.76
     - botocore >=1.19.52
-    - certifi >=2023.7.22
+    - aiohttp >=3.7.4
+    - certifi >=2024.8.30
     - click >=7.0
     - colorama
     - gitpython
     - google-auth
-    - halo
-    - humanize
     - jsonpatch
     - jsonschema
     - oauth2client
     - packaging
     - pathspec >=0.8.1
     - python-dateutil
-    - pyyaml
     - requests
     - rich
     - six >=1.10
-    - smart_open
     - tabulate
-    - tqdm
-    - tzlocal
     - urllib3 >=1.26.17
     - wrapt
+    - pyyaml
+    - smart_open
+    - tqdm
+    - tzlocal
+    - humanize
+    - typing_extensions
+    - halo
+    - log_symbols >=0.0.14
+    - spinners >=0.0.24
+    - termcolor >=1.1.0
+    - colorama >=0.3.9
+    # - argon2-cffi
+    # - tabulate
 
 test:
   imports:
