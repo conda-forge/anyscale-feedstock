@@ -1,5 +1,5 @@
 {% set name = "anyscale" %}
-{% set version = "0.26.29" %}
+{% set version = "0.26.30" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/anyscale-{{ version }}.tar.gz
-  sha256: d4783280209880aae66d0674cd956a47b76376afce4c8486bbc7e2e42d479a61
+  sha256: b606d9eae0d69b75e7a7598b4598e6993a3ebfeabfab0b7c803a6d0f5eecd4b6
 
 build:
   number: 0
@@ -55,6 +55,7 @@ requirements:
     - spinners >=0.0.24
     - termcolor >=1.1.0
     - colorama >=0.3.9
+    - websockets
     # - argon2-cffi
     # - tabulate
 
