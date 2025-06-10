@@ -55,6 +55,7 @@ requirements:
     - spinners >=0.0.24
     - termcolor >=1.1.0
     - colorama >=0.3.9
+    - websockets
     # - argon2-cffi
     # - tabulate
 
