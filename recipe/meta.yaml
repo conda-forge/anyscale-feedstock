@@ -34,7 +34,7 @@ requirements:
     - google-auth
     - jsonpatch
     - jsonschema
-    - kubernetes
+    - python-kubernetes
     - oauth2client
     - packaging
     - pathspec >=0.8.1
