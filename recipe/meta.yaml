@@ -1,5 +1,5 @@
 {% set name = "anyscale" %}
-{% set version = "0.26.83" %}
+{% set version = "0.26.84" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/anyscale-{{ version }}.tar.gz
-  sha256: 3a10467115376e9cbf2cbc1d9a8fc80c60a79b89584b4a31114c5b666a794719
+  sha256: 6f05946ef387680fb0436df591789492d21558467a0ecb7805538da2c34bc53f
 
 build:
   number: 0
