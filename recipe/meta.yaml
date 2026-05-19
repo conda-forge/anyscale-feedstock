@@ -1,13 +1,13 @@
 {% set name = "anyscale" %}
-{% set version = "0.26.101" %}
+{% set version = "0.26.102" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/e4/ba/a9549c6f673d8a009fb5c2135226f83d0df478dfb5c1f8e0a7054def8c5d/anyscale-{{ version }}.tar.gz
-  sha256: cbcac9d5d1fea644c836fb9d6aedd180e6a69e30fce03895180b1bcebb5dcea2
+  url: https://files.pythonhosted.org/packages/99/0d/3fb148cb02c29e58295b75e9bae027b97072d920a8c32da64dd8dfdbf6b1/anyscale-{{ version }}.tar.gz
+  sha256: 3b7c3e342c183cb9a26f2fd9722aba59f903c0e097119c4af2ece8ececa8d333
 
 build:
   number: 0
