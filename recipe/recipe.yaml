@@ -1,29 +1,33 @@
-{% set name = "anyscale" %}
-{% set version = "0.26.108" %}
+schema_version: 1
+
+context:
+  version: "0.26.108"
+  python_min: "3.11"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: anyscale
+  version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/b1/be/3bf99eb43257242975c03e879452afa4d0ec72c647ad81381b62b6be6493/anyscale-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/b1/be/3bf99eb43257242975c03e879452afa4d0ec72c647ad81381b62b6be6493/anyscale-${{ version }}.tar.gz
   sha256: f03656dabd59926aa30bc6292b0cec9794e8330d80266739a9c77f5166176724
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  entry_points:
-    - anyscale = anyscale.scripts:main
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - anyscale = anyscale.scripts:main
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools
     - setuptools_scm
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - boto3 >=1.26.76
     - botocore >=1.19.52
     - aiohttp >=3.7.4
@@ -60,24 +64,29 @@ requirements:
     # - argon2-cffi
     # - tabulate
 
-test:
-  imports:
-    - anyscale
-  requires:
-    - python {{ python_min }}
-    # until https://github.com/pypa/pip/issues/12884 is fixed
-    - pip <24.2
-  commands:
-    - pip check
-    - anyscale --version
+tests:
+  - python:
+      imports:
+        - anyscale
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        # until https://github.com/pypa/pip/issues/12884 is fixed
+        - pip <24.2
+    script:
+      - anyscale --version
 
 about:
-  home: https://docs.anyscale.com/reference/cli
+  homepage: https://docs.anyscale.com/reference/cli
   summary: Command Line Interface for Anyscale
   description: Command Line Interface for Anyscale
   license: LicenseRef-AS
   license_file: LICENSE
-  doc_url: https://docs.anyscale.com/reference/cli
+  documentation: https://docs.anyscale.com/reference/cli
 
 extra:
   recipe-maintainers:
