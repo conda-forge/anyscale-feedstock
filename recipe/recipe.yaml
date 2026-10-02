@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.26.108"
+  version: "0.26.109"
   python_min: "3.11"
 
 package:
@@ -9,11 +9,11 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/b1/be/3bf99eb43257242975c03e879452afa4d0ec72c647ad81381b62b6be6493/anyscale-${{ version }}.tar.gz
-  sha256: f03656dabd59926aa30bc6292b0cec9794e8330d80266739a9c77f5166176724
+  url: https://files.pythonhosted.org/packages/0a/6d/27f5c57d91ce4c09275f734feff1961a54a51b306ee1e15288a59b7ae5e7/anyscale-${{ version }}.tar.gz
+  sha256: 93e63ff7113da7d12c6d2913010a984ef3c982b63e1b613488ed6c5f555611d3
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
