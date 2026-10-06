@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.26.109"
+  version: "0.26.110"
   python_min: "3.11"
 
 package:
@@ -9,8 +9,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/0a/6d/27f5c57d91ce4c09275f734feff1961a54a51b306ee1e15288a59b7ae5e7/anyscale-${{ version }}.tar.gz
-  sha256: 93e63ff7113da7d12c6d2913010a984ef3c982b63e1b613488ed6c5f555611d3
+  url: https://files.pythonhosted.org/packages/ea/c6/fc69c28bdcf69245e5ae6202f209ced887c3667e65fcd01ac3d12a5c226a/anyscale-${{ version }}.tar.gz
+  sha256: 8472baef910d872dd8724115fe8fde433894a558985b55cfb8b68647cbf684dd
 
 build:
   number: 0
