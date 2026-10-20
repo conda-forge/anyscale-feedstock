@@ -2,7 +2,6 @@ schema_version: 1
 
 context:
   version: "0.26.111"
-  python_min: "3.11"
 
 package:
   name: anyscale
@@ -27,7 +26,7 @@ requirements:
     - setuptools
     - setuptools_scm
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<3.15
     - boto3 >=1.26.76
     - botocore >=1.19.52
     - aiohttp >=3.7.4
