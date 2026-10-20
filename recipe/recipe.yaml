@@ -1,16 +1,15 @@
 schema_version: 1
 
 context:
-  version: "0.26.110"
-  python_min: "3.11"
+  version: "0.26.111"
 
 package:
   name: anyscale
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/ea/c6/fc69c28bdcf69245e5ae6202f209ced887c3667e65fcd01ac3d12a5c226a/anyscale-${{ version }}.tar.gz
-  sha256: 8472baef910d872dd8724115fe8fde433894a558985b55cfb8b68647cbf684dd
+  url: https://files.pythonhosted.org/packages/f9/7f/8d4d79179199a313a923c6c0a566779381303c4189d91d5baf3ca713924f/anyscale-${{ version }}.tar.gz
+  sha256: b89ad0581cf49af10b4c9b26c2b71b29d29935846247e1aaa9ea6b35e9b05d35
 
 build:
   number: 0
@@ -27,7 +26,7 @@ requirements:
     - setuptools
     - setuptools_scm
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<3.15
     - boto3 >=1.26.76
     - botocore >=1.19.52
     - aiohttp >=3.7.4
