@@ -1,15 +1,15 @@
 schema_version: 1
 
 context:
-  version: "0.26.117"
+  version: "0.26.118"
 
 package:
   name: anyscale
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/41/fc/9db2dea757116a112691604edd1e6fd45028ab49cb8c1ffa497e3807316c/anyscale-${{ version }}.tar.gz
-  sha256: 9b8780e041eec98776ba8972330d098b816fa2eae65fa047e0ba10ace07b0626
+  url: https://files.pythonhosted.org/packages/fe/50/0d7466a96a9aa5c48f4a56811fa1dea1c75a7fe2046b172d39056dcea471/anyscale-${{ version }}.tar.gz
+  sha256: dc00a4f52c9b1daab6438e5f145553317a53ba505f4be6b8bf6d6e6ce08c4781
 
 build:
   number: 0
